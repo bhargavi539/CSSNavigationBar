@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navbar with drop-down</title>
+	<style type="text/css">
+		nav ul{
+			background-color: lightgrey;
+			padding: 10px;
+		}
+		ul li{
+			list-style-type: none;
+			display: inline-block;
+		}
+		ul li a{
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			font-family: monospace;
+			font-size: 20px;
+			padding: 5px 10px;
+		}
+		ul li a:hover{
+			background-color: darkgrey;
+		}
+		.dropdown{
+			position: relative;
+		}
+		.dropdowncontent{
+			position: absolute;
+			display: none;
+		}
+		.dropdowncontent a{
+			display: block;
+			background-color: lightgrey;
+			width: auto;
+		}
+		
+		.dropdown:hover .dropdowncontent{
+			display: block;
+		}
+		.subdropdown{
+			position: relative;
+		}
+		.subdropdowncontent{
+			position: absolute;
+			display: none;
+			left: 70px;
+			top: 0px;
+		}
+		.subdropdowncontent a{
+			background-color: lightgrey;
+			width: auto;
+		}
+	  	.subdropdown:hover .subdropdowncontent{
+	  		display: block;
+	  		
+	  	}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li class="dropdown"><a href="#">About</a>
+						<div class="dropdowncontent">
+							<a href="#">Link1</a>
+							<a href="#">Link2</a>
+							<div class="subdropdown"><a href="#">Link3</a>
+									<div class="subdropdowncontent">
+										<a href="#">sublink1</a>
+										<a href="#">sublink2</a>
+										<a href="#">sublink3</a>
+									</div><!--subdropdowncontent-->
+								</div><!--subdropdown-->
+						</div><!--dropdowncontent-->
+				</li>
+					<li class="dropdown"><a href="#">Services</a>
+						<div class="dropdowncontent">
+							<a href="#">Service1</a>
+							<a href="#">Service2</a>
+							<a href="#">Service3</a>
+						</div>
+					</li>
+						<li><a href="#">ContactUs</a></li>
+				</li>
+			
+		</ul>
+	</nav>
+</body>
+</html>
